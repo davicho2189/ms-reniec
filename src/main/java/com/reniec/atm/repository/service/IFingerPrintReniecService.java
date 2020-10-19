@@ -5,5 +5,5 @@ import io.reactivex.Single;
 
 public interface IFingerPrintReniecService {
 
-    public Single<ReniecResponse> findByDocument(String dni) throws Exception;
+  public Single<ReniecResponse> findByDocument(String dni) throws Exception;
 }
