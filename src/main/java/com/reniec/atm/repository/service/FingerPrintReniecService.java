@@ -6,6 +6,7 @@ import com.reniec.atm.model.entity.FingerPrint;
 import com.reniec.atm.model.exception.BusinessException;
 import com.reniec.atm.repository.dao.FingerPrintReniecDao;
 import io.reactivex.Single;
+import io.reactivex.schedulers.Schedulers;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class FingerPrintReniecService implements IFingerPrintReniecService {
 
            FingerPrint fingerPrint = fingerPrintDao.findByDocument(dni);
           if(fingerPrint!=null)
-             return Single.just(new ReniecResponse("Reniec",true));
+             return Single.just(new ReniecResponse("Reniec",true)).subscribeOn(Schedulers.io());
           else
            throw new BusinessException();
     }
