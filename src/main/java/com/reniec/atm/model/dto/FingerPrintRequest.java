@@ -1,7 +1,11 @@
 package com.reniec.atm.model.dto;
 
 import io.swagger.annotations.ApiModel;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @ApiModel("FingerPrintRequest")
 @Getter
@@ -11,5 +15,5 @@ import lombok.*;
 @ToString
 public class FingerPrintRequest {
 
-    private String document;
+  private String document;
 }
