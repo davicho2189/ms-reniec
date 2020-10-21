@@ -1,4 +1,4 @@
-insert into fingerprint(id,document) values (1,'46181585');
+insert into fingerprint(id,document) values (1,'10000000');
 insert into fingerprint(id,document) values (2,'00217095');
 insert into fingerprint(id,document) values (3,'20145257');
 insert into fingerprint(id,document) values (4,'46151857');
